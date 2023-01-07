@@ -1,0 +1,14 @@
+# editorconfig.org
+root = true
+
+[*]
+indent_style = space # отступы вместо табуляции пробелами
+indent_size = 2 # размер отступа 2 символа
+end_of_line = lf
+charset = utf-8 # кодировка
+trim_trailing_whitespace = true # удаляет лишние пробелы в конце
+insert_final_newline = true # добавляет пустую строку в конце документа
+# max_line_length = 100 # ширина строки не более 100 символов
+
+[*.md]
+trim_trailing_whitespace = false
