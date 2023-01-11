@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  padding: 30px 0 45px;
   font-family: "font", sans-serif;
 }
 
@@ -23,4 +24,67 @@ img {
 
 .flex {
   display: flex;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.list-rst {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* *header */
+.header {
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: auto;
+}
+
+.header-nav {
+  margin-right: 52px;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 52px;
+}
+
+.header-btn {
+  padding: 15px 35.5px;
+}
+/* *home */
+.home {
+  padding: 113px 826px 134px 0;
+}
+
+.home-title {
+  margin: 0 0 26px;
+}
+
+.home-descr {
+  margin: 0 0 34px;
+}
+
+.home-bot {
+  flex-direction: column;
+}
+
+.home-btn {
+  padding: 19px 58px;
+  margin: 0 0 14px;
+}
+
+.home-secure {
+  align-self: center;
 }
