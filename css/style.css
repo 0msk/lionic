@@ -53,6 +53,7 @@ img {
 
 .header-logo {
   margin-right: auto;
+  max-width: 115px;
 }
 
 .header-nav {
@@ -126,4 +127,41 @@ margin: 0 0 15px;
 .services-item-descr {
   margin: 0;
   text-align: center;
+}
+
+.articles-list {
+  flex-wrap: wrap;
+}
+
+.articles-title {
+  margin: 0 0 42px;
+}
+
+.articles-item {
+  width: 570px;
+}
+
+.articles-item:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+
+.articles-item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 30px;
+}
+
+.blog-preview-img {
+  width: 170px;
+  object-fit: cover;
+}
+
+.blog-preview-text {
+  padding: 23px 30px 38px;
+}
+
+.blog-preview-title {
+  margin: 0 0 15px;
+}
+
+.blog-preview-descr {
+  margin: 0;
 }
