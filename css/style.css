@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  padding: 30px 0 45px;
   font-family: "font", sans-serif;
 }
 
@@ -49,11 +48,12 @@ img {
 
 .header {
   align-items: center;
+  padding: 30px 0;
 }
 
 .header-logo {
-  margin-right: auto;
   max-width: 115px;
+  margin-right: auto;
 }
 
 .header-nav {
@@ -87,8 +87,8 @@ img {
 }
 
 .hero-btn {
-  padding: 19px 58px;
   margin: 0 0 14px;
+  padding: 19px 58px;
 }
 
 .hero-secure {
@@ -108,8 +108,8 @@ img {
 .services-item {
   flex-direction: column;
   align-items: center;
-  padding: 61px 30px 62px;
   width: 270px;
+  padding: 61px 30px 62px;
 }
 
 .services-item:not(:nth-child(4n)) {
@@ -121,7 +121,7 @@ img {
 }
 
 .services-item-title {
-margin: 0 0 15px;
+  margin: 0 0 15px;
 }
 
 .services-item-descr {
@@ -164,4 +164,97 @@ margin: 0 0 15px;
 
 .blog-preview-descr {
   margin: 0;
+}
+
+.clients-title {
+  margin: 0 0 42px;
+}
+
+.clients-item {
+  flex-direction: column;
+  width: 370px;
+  padding: 51px 36px 32px;
+}
+
+.clients-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.clients-descr {
+  margin: 0 0 33px;
+}
+
+.clients-user {
+  align-items: center;
+  margin-top: auto;
+}
+
+.clients-avatar {
+  flex-shrink: 0;
+  width: 67px;
+  margin-right: 17px;
+}
+
+.contacts-title {
+  margin: 0 0 109px;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-item-title {
+  display: inline-block;
+  margin: 0 0 30px;
+}
+
+.contacts-link:not(:last-child) {
+  padding-bottom: 5px;
+}
+
+.contacts-descr {
+  width: 214px;
+  margin: 0;
+}
+
+.contacts-visit {
+  margin-right: 186px;
+}
+
+.contacts-call {
+  margin-right: 279px;
+}
+
+.contacts-links {
+  flex-direction: column;
+}
+
+.footer {
+  padding: 45px 0;
+}
+
+.footer-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 115px;
+  margin-right: 25px;
+}
+
+.footer-list {
+  margin-right: 56px;
+}
+
+.footer-item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 32px;
 }
