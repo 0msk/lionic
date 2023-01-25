@@ -40,7 +40,6 @@ html {
 
 body {
   font-family: "OpenSans", sans-serif;
-  font-weight: 400;
 }
 
 a {
@@ -79,6 +78,10 @@ img {
   padding: 87px 0 160px;
 }
 
+.section-border {
+  border-bottom: 1px solid #c4c4c4;
+}
+
 .logo {
   flex-shrink: 0;
   max-width: 115px;
@@ -86,7 +89,7 @@ img {
 
 /* *header */
 
-.header {
+.header-container {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
@@ -112,6 +115,13 @@ img {
   margin-right: 52px;
 }
 
+/* .header-item-link {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.34em;
+  color: #1c1c1c;
+} */
+
 .header-btn {
   padding: 15px 35.5px;
 }
@@ -119,6 +129,10 @@ img {
 /* *hero */
 
 .hero {
+  background: url("../img/hero-bg.2x.jpg") no-repeat center center / cover;
+}
+
+.hero-wrapper {
   flex-direction: column;
   align-items: flex-start;
   max-width: 50%;
@@ -305,7 +319,7 @@ img {
 
 /* *footer */
 
-.footer {
+.footer-container {
   align-items: center;
   padding: 45px 0;
 }
