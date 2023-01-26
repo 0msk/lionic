@@ -143,7 +143,7 @@ img {
 /* *hero */
 
 .hero {
-  background: url("../img/hero-bg.2x.jpg") no-repeat center center / cover;
+  background: url("../img/hero-bg.2x.jpg") no-repeat center / cover;
 }
 
 .hero-wrapper {
@@ -261,9 +261,6 @@ img {
 
 .articles-item {
   width: 570px;
-  border: 1px solid #e4e4e4;
-  border-radius: 5px;
-  overflow: hidden;
 }
 
 .articles-item:not(:nth-child(2n)) {
@@ -272,6 +269,13 @@ img {
 
 .articles-item:not(:nth-last-child(-n+2)) {
   margin-bottom: 30px;
+}
+
+.blog-preview {
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .blog-preview-img {
@@ -299,7 +303,7 @@ img {
 }
 
 .blog-preview-descr {
-  width: 210px;
+  max-width: 210px;
   margin: 0;
   font-weight: 400;
   font-size: 14px;
@@ -332,17 +336,18 @@ img {
 
 .clients-descr {
   margin: 0 0 33px;
-  padding-bottom: 33px; /* !найти лучшее решение применение border-bottom  */
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8em;
   color: #787878;
-  border-bottom: 1px solid #dadada; /* !найти лучшее решение применение border-bottom  */
 }
 
 .clients-user {
+  width: 100%;
   align-items: center;
   margin-top: auto;
+  padding-top: 26px;
+  border-top: 1px solid #dadada;
 }
 
 .clients-avatar {
@@ -471,18 +476,23 @@ img {
 
 .social-link {
   display: block;
-  padding: 13px;
   font-size: 0;
 }
 
 .social-link-twitter {
-  background: url("../img/twitter.svg") no-repeat center center  / 18px 14px;
+  width: 18px;
+  height: 14px;
+  background: url("../img/twitter.svg") no-repeat center  / contain;
 }
 
 .social-link-linkedin {
-  background: url("../img/linkedin.svg") no-repeat center center  / 17px 16px;
+  width: 17px;
+  height: 16px;
+  background: url("../img/linkedin.svg") no-repeat center  / contain;
 }
 
 .social-link-mail {
-  background: url("../img/footer-mail.svg") no-repeat center center  / 24px 18px;
+  width: 24px;
+  height: 18px;
+  background: url("../img/footer-mail.svg") no-repeat center  / contain;
 }
