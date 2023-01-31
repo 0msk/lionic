@@ -431,6 +431,22 @@ img {
   flex-direction: column;
 }
 
+/* *join-us */
+
+.join-us-title {
+  margin: 0 0 22px;
+  text-align: center;
+}
+
+.join-us-descr {
+  margin: 0 0 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375em;
+  text-align: center;
+  color: #787878;
+}
+
 /* *footer */
 
 .footer-container {
