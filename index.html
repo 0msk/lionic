@@ -216,17 +216,17 @@
       </div>
     </section>
     <!-- *join-us -->
-    <section class="join-us section-offset section-border" id="join-us">
+    <section class="join-us section-border" id="join-us">
       <div class="container">
         <h2 class="join-us-title section-title">Join&nbsp;us</h2>
         <p class="join-us-descr">Take control of&nbsp;your paid subscriptions today!</p>
         <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-          <div class="form-top"></div>
-            <div class="form-left">
-              <input class="form-input" type="name" name="Name" placeholder="Name" required>
-              <input class="form-input" type="email" name="E-mail" placeholder="E-mail" required>
-              <input class="form-input" type="tel" name="Phone" placeholder="Phone" required>
-              <select class="form-select" name="country">
+          <div class="form-top flex">
+            <div class="form-left flex">
+              <input class="form-input form-item" type="text" name="Name" placeholder="Name" required>
+              <input class="form-input form-item" type="email" name="E-mail" placeholder="E-mail" required>
+              <input class="form-input form-item" type="tel" name="Phone" placeholder="Phone" required>
+              <select class="form-select form-item" name="country">
                 <option value="Country" disabled selected>Country</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="United States">United States</option>
@@ -237,14 +237,16 @@
               </select>
             </div>
             <div class="form-right">
-              <textarea class="form-textarea" name="Comment" placeholder="Comment"></textarea>
+              <textarea class="form-textarea form-item" name="Comment" placeholder="Comment"></textarea>
             </div>
-          <div class="form-bot">
-            <div class="form-wrapper">
-              <button class="form-btn btn" type="submit">Get started</button>
-              <label>
-                <input class="form-input" type="checkbox" required>
-                I&nbsp;agree with the <a href="#" target="_blank">user agreement</a>
+          </div>
+          <div class="form-bot flex">
+            <div class="form-wrapper flex">
+              <!-- <button class="form-btn btn" type="submit">Get started</button> -->
+              <button class="form-btn btn">Get started</button>
+              <label class="form-label flex">
+                <input class="form-checkbox" type="checkbox" required>
+                I&nbsp;agree with the&nbsp;<a class="form-link" href="#" target="_blank">user agreement</a>
               </label>
             </div>
           </div>
