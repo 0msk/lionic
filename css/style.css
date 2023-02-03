@@ -436,7 +436,7 @@ img {
 /* *join-us */
 
 .join-us {
-  padding: 87px 55px 122px;
+  padding: 87px 0 122px;
 }
 
 .join-us-title {
@@ -453,6 +453,10 @@ img {
   color: #787878;
 }
 
+.form {
+  padding: 0 55px;
+}
+
 .form-top {
   justify-content: space-between;
   margin-bottom: 22px;
@@ -461,7 +465,7 @@ img {
 .form-left {
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 19px;
+  gap: 19px 0;
   width: 49%;
 }
 
@@ -517,7 +521,7 @@ img {
   color: #787878;
 }
 
-.form-checkbox {
+.form-check {
   margin-right: 8px;
 }
 
