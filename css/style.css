@@ -117,6 +117,10 @@ img {
   opacity: 0;
 }
 
+.btn:active::before {
+  opacity: 0;
+}
+
 .btn:hover {
   background-color: #71a7e2;
 }
@@ -154,7 +158,6 @@ img {
 .logo {
   flex-shrink: 0;
   max-width: 115px;
-  outline: none;
 }
 
 .logo-fill{
@@ -166,8 +169,16 @@ img {
   outline-offset: 3px;
 }
 
-.logo:hover .logo-fill {
+ .logo:hover {
+  outline: none;
+}
+
+ .logo:hover .logo-fill {
   fill: #71a7e2;
+}
+
+.logo:active {
+  outline: none;
 }
 
 .logo:active .logo-fill {
@@ -184,15 +195,6 @@ img {
 
 .header-logo {
   margin-right: 52px;
-}
-
-.header-logo:focus {
-  outline: 1px solid #71a7e2;
-  outline-offset: 5px;
-}
-
-.header-logo:hover {
-  color: #71a7e2;
 }
 
 .header-right {
@@ -218,6 +220,8 @@ img {
   line-height: 1.34em;
   color: #1c1c1c;
 }
+
+/* !сделать по макету состояние элементов. сделано с ошибкой */
 
 .header-item-link:focus {
   outline: 1px solid #71a7e2;
@@ -246,6 +250,8 @@ img {
 .header-item-link:active {
   color: #3172b9;
 }
+
+/* !сделать по макету состояние элементов. сделано с ошибкой */
 
 .header-btn {
   min-width: 150px;
@@ -672,6 +678,26 @@ img {
   opacity: .6;
   border: 1px solid #dadada;
   line-height: 1.8em;
+  outline: none;
+}
+
+.form-item:focus {
+  background-color: rgba(113,167,226,.2);
+  border: 1px solid #71a7e2;
+}
+
+.form-item:hover {
+  background-color: transparent;
+  border: 1px solid #71a7e2;
+}
+
+.form-item:active {
+  background-color: transparent;
+  border: 1px solid #0e3b6c;
+}
+
+.form-item:active::placeholder {
+  color: #1c1c1c;
 }
 
 .form-right {
@@ -765,7 +791,7 @@ img {
   font-size: 0;
 }
 
-.social-link-twitter {
+/* .social-link-twitter {
   width: 18px;
   height: 14px;
   background: url("../img/twitter.svg") no-repeat center  / contain;
@@ -781,4 +807,4 @@ img {
   width: 24px;
   height: 18px;
   background: url("../img/footer-mail.svg") no-repeat center  / contain;
-}
+} */
