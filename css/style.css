@@ -109,16 +109,9 @@ img {
   opacity: 0;
 }
 
-.btn:focus::before {
+/* При фокусе кнопки появляется бордер, но при hover и active его не будет */
+.btn:focus:not(:hover):not(:active)::before {
   opacity: 1;
-}
-
-.btn:hover::before {
-  opacity: 0;
-}
-
-.btn:active::before {
-  opacity: 0;
 }
 
 .btn:hover {
@@ -158,27 +151,17 @@ img {
 .logo {
   flex-shrink: 0;
   max-width: 115px;
+  outline: none;
 }
 
-.logo-fill{
-  fill: #3172b9;
-}
-
-.logo:focus {
+/* При фокусе логотипа появляется обводка, но при hover и active ее не будет */
+.logo:focus:not(:hover):not(:active) {
   outline: 1px solid #71a7e2;
   outline-offset: 3px;
 }
 
- .logo:hover {
-  outline: none;
-}
-
  .logo:hover .logo-fill {
   fill: #71a7e2;
-}
-
-.logo:active {
-  outline: none;
 }
 
 .logo:active .logo-fill {
@@ -219,11 +202,10 @@ img {
   font-size: 15px;
   line-height: 1.34em;
   color: #1c1c1c;
+  outline: none;
 }
 
-/* !сделать по макету состояние элементов. сделано с ошибкой */
-
-.header-item-link:focus {
+.header-item-link:focus:not(:hover):not(:active) {
   outline: 1px solid #71a7e2;
   outline-offset: 3px;
 }
@@ -250,8 +232,6 @@ img {
 .header-item-link:active {
   color: #3172b9;
 }
-
-/* !сделать по макету состояние элементов. сделано с ошибкой */
 
 .header-btn {
   min-width: 150px;
@@ -624,6 +604,7 @@ img {
 
 .contacts-link:active {
   color: #0e3b6c;
+  outline: none;
 }
 
 /* *join-us */
@@ -681,18 +662,16 @@ img {
   outline: none;
 }
 
-.form-item:focus {
+.form-item:focus:not(:hover):not(:active) {
   background-color: rgba(113,167,226,.2);
   border: 1px solid #71a7e2;
 }
 
 .form-item:hover {
-  background-color: transparent;
   border: 1px solid #71a7e2;
 }
 
 .form-item:active {
-  background-color: transparent;
   border: 1px solid #0e3b6c;
 }
 
@@ -735,12 +714,78 @@ img {
 }
 
 .form-check {
-  margin-right: 8px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form-check+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.form-check+label::before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 14px;
+  height: 14px;
+  margin-right: 0.65em;
+  border: 1px solid #cacaca;
+}
+
+.form-check:checked+label::before {
+  background: url("../img/check.svg") no-repeat center / 14px;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.form-check:focus+label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.form-check:focus:not(:checked)+label::before {
+  border-color: #80bdff;
+}
+
+/* стили при наведении курсора на checkbox */
+.form-check:not(:disabled):not(:checked)+label:hover::before {
+  border-color: #71a7e2;
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.form-check:not(:disabled):active+label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.form-check:disabled+label::before {
+  background-color: rgb(196,196,196,.3);
+  cursor: not-allowed;
 }
 
 .form-link {
-  color: #3172B9;
-  border-bottom: 1px solid #3172B9;
+  color: #3172b9;
+  border-bottom: 1px solid #3172b9;
+  outline: none;
+}
+
+.form-link:focus:not(:hover):not(:active) {
+  outline: 1px solid #71a7e2;
+  outline-offset: 3px;
+}
+
+.form-link:hover {
+  color: #71a7e2;
+  border-color: #71a7e2;
+}
+
+.form-link:active {
+  color: #3172b9;
+  border-color: #3172b9;
 }
 
 /* *footer */
@@ -772,10 +817,40 @@ img {
 }
 
 .footer-item-link {
+  position: relative;
   font-weight: 600;
   font-size: 15px;
   line-height: 1.34em;
   color: #787878;
+  outline: none;
+}
+
+.footer-item-link:focus:not(:hover):not(:active) {
+  outline: 1px solid #71a7e2;
+  outline-offset: 3px;
+}
+
+.footer-item-link:hover {
+  color: #71a7e2;
+}
+
+.footer-item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3172b9;
+  opacity: 0;
+}
+
+.footer-item-link:active::after {
+  opacity: 1;
+}
+
+.footer-item-link:active {
+  color: #3172b9;
 }
 
 .social {
@@ -783,28 +858,21 @@ img {
 }
 
 .social-item:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 21px;
 }
 
 .social-link {
-  display: block;
-  font-size: 0;
+  outline: none;
 }
 
-/* .social-link-twitter {
-  width: 18px;
-  height: 14px;
-  background: url("../img/twitter.svg") no-repeat center  / contain;
+.social-link:focus:not(:hover):not(:active) {
+  outline: 1px solid #71a7e2;
 }
 
-.social-link-linkedin {
-  width: 17px;
-  height: 16px;
-  background: url("../img/linkedin.svg") no-repeat center  / contain;
+.social-link:hover .social-fill {
+  fill: #71a7e2;
 }
 
-.social-link-mail {
-  width: 24px;
-  height: 18px;
-  background: url("../img/footer-mail.svg") no-repeat center  / contain;
-} */
+.social-link:active .social-fill {
+  fill: #3172b9;
+}
