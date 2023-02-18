@@ -95,6 +95,7 @@ img {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
 }
 
 .btn::before {
@@ -107,6 +108,7 @@ img {
   border: 1px solid #71a7e2;
   border-radius: inherit;
   opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 /* При фокусе кнопки появляется бордер, но при hover и active его не будет */
@@ -154,6 +156,10 @@ img {
   outline: none;
 }
 
+.logo-fill {
+  transition: fill .3s ease-in-out;
+}
+
 /* При фокусе логотипа появляется обводка, но при hover и active ее не будет */
 .logo:focus:not(:hover):not(:active) {
   outline: 1px solid #71a7e2;
@@ -161,11 +167,12 @@ img {
 }
 
  .logo:hover .logo-fill {
-  fill: #71a7e2;
+   fill: #71a7e2;
+   /* transition: fill .3s ease-in-out; */
 }
 
 .logo:active .logo-fill {
-  fill: #3172b9;
+  fill: #0e3b6c;
 }
 
 /* *header */
@@ -203,6 +210,7 @@ img {
   line-height: 1.34em;
   color: #1c1c1c;
   outline: none;
+  transition: color .3s ease-in-out;
 }
 
 .header-item-link:focus:not(:hover):not(:active) {
@@ -223,6 +231,7 @@ img {
   height: 2px;
   background-color: #3172b9;
   opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .header-item-link:active::after {
@@ -320,6 +329,7 @@ img {
   padding: 61px 30px 62px;
   border: 1px solid #e4e4e4;
   border-radius: 5px;
+  transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .services-item:hover {
@@ -329,14 +339,17 @@ img {
 
 .services-item:hover .services-icon {
   fill: #fff;
+  transition: fill .3s ease-in-out;
 }
 
 .services-item:hover .services-item-title {
   color: #fff;
+  transition: color .3s ease-in-out;
 }
 
 .services-item:hover .services-item-descr {
   color: #fff;
+  transition: color .3s ease-in-out;
 }
 
 .services-item:not(:nth-child(4n)) {
@@ -395,6 +408,7 @@ img {
   border-radius: 5px;
   overflow: hidden;
   outline: none;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
 .blog-preview-link:focus {
@@ -590,21 +604,21 @@ img {
 
 .contacts-link {
   width: fit-content;
+  outline: none;
+  transition: color .3s ease-in-out;
 }
 
-.contacts-link:focus {
+.contacts-link:focus:not(:hover):not(:active) {
   outline: 1px solid #3172b9;
   outline-offset: 3px;
 }
 
 .contacts-link:hover {
   color: #71a7e2;
-  outline: none;
 }
 
 .contacts-link:active {
   color: #0e3b6c;
-  outline: none;
 }
 
 /* *join-us */
@@ -654,28 +668,29 @@ img {
   color: #787878;
 }
 
-.form-item {
+.form-child {
   padding: 15px 28px;
   opacity: .6;
   border: 1px solid #dadada;
   line-height: 1.8em;
   outline: none;
+  transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 }
 
-.form-item:focus:not(:hover):not(:active) {
+.form-child:focus:not(:hover):not(:active) {
   background-color: rgba(113,167,226,.2);
   border: 1px solid #71a7e2;
 }
 
-.form-item:hover {
+.form-child:hover {
   border: 1px solid #71a7e2;
 }
 
-.form-item:active {
+.form-child:active {
   border: 1px solid #0e3b6c;
 }
 
-.form-item:active::placeholder {
+.form-child:active::placeholder {
   color: #1c1c1c;
 }
 
@@ -734,6 +749,7 @@ img {
   height: 14px;
   margin-right: 0.65em;
   border: 1px solid #cacaca;
+  transition: border-color .3s ease-in-out;
 }
 
 .form-check:checked+label::before {
@@ -823,6 +839,7 @@ img {
   line-height: 1.34em;
   color: #787878;
   outline: none;
+  transition: color .3s ease-in-out;
 }
 
 .footer-item-link:focus:not(:hover):not(:active) {
@@ -843,6 +860,7 @@ img {
   height: 2px;
   background-color: #3172b9;
   opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .footer-item-link:active::after {
@@ -863,6 +881,10 @@ img {
 
 .social-link {
   outline: none;
+}
+
+.social-fill {
+  transition: fill .3s ease-in-out;
 }
 
 .social-link:focus:not(:hover):not(:active) {
